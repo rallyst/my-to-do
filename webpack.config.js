@@ -1,12 +1,14 @@
+/* eslint-disable no-undef */
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } =require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const filename = (ext) =>
+  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -25,15 +27,15 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'), 
+      template: path.resolve(__dirname, 'src/index.html'),
       filename: 'index.html',
       minify: {
         collapseWhitespace: isProd,
-      }
+      },
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `./css/${filename('css')}`
+      filename: `./css/${filename('css')}`,
     }),
   ],
   devtool: isProd ? false : 'source-map',
@@ -49,10 +51,10 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: isDev
+              hmr: isDev,
             },
           },
-          'css-loader' 
+          'css-loader',
         ],
       },
       {
@@ -63,13 +65,12 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader", // parse js to old versions for old browsers
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
-      }
-
-    ]
-  }
-}
+      },
+    ],
+  },
+};
