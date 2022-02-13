@@ -1,7 +1,7 @@
 import "../index.html";
 import "../scss/index.scss";
 
-const r = 5;
+let r = 5;
 
 const m = {
   name: "john",
