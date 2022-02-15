@@ -1,5 +1,5 @@
-@import '~normalize.css';
-
-h1 {
-  color: red;
-}
+// @import '~normalize.css';
+@import './base';
+@import './variables';
+@import './sections/header';
+@import './sections/tasks';

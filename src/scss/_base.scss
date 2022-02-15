@@ -1,0 +1,42 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Fira sans', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $dark-color;
+  color: $light-color;
+}
+
+input, button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input:hover,
+input:focus {
+  outline: 1px solid lime;
+  opacity: .8;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.title {
+  color: $gray-color;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 300;
+}

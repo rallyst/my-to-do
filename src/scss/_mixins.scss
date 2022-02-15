@@ -1,0 +1,11 @@
+@mixin gradient-right {
+  background-image: linear-gradient(to right, $primary-color, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-left {
+  background-image: linear-gradient(to left, $primary-color, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

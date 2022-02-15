@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <title>My ToDo List</title>
 <script defer="defer" src="./js/main.js"></script><link href="./css/main.css" rel="stylesheet"></head>
 <body>
   <div class="container">
-    <h1>Hello  fffdf</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus est officiis, ad autem voluptas quidem totam ducimus animi, sapiente impedit repellendus eius molestiae qui incidunt quaerat itaque consectetur sit perspiciatis? Fugit enim sint dicta necessitatibus atque praesentium ratione doloremque autem, facere quae blanditiis iusto laudantium omnis placeat, repellat nobis recusandae odio. Deleniti mollitia ab debitis quas quos dolorem, provident dolore cupiditate molestiae labore maiores a similique ut nobis sunt fuga voluptates voluptatibus nesciunt quaerat. Delectus eveniet tempore aut pariatur maiores obcaecati soluta repellendus corrupti, sint deserunt quae! Deleniti aspernatur cumque aliquam harum non rem laudantium eveniet repellendus at, consectetur quae consequatur sed unde molestiae sunt vitae dolorem. Repudiandae sint sequi, unde assumenda cum dignissimos omnis ipsa pariatur id tempora exercitationem consequatur voluptatem rerum. Vel nisi ipsum nihil veritatis consequatur ex nostrum rerum magni pariatur molestias? Inventore accusantium quaerat quis repellat.</p>
+    <header class="header">
+      <div class="heading">
+        <h1 class="header__title title">ToDo List</h1>
+        <input type="text" name="filter" class="filter" placeholder="Find task">
+      </div>
+      <form class="header__form">
+        <input type="text" class="header__form-input" placeholder="What do you have planned?">
+        <input type="submit" class="header__form-submit" value="add task">
+      </form>
+      <div class="message__container">
+        <span class="warning"></span>
+      </div>
+      
+    </header>
+    <section class="task-list">
+      <h2 class="task-list__title title">Tasks</h2>
+      <div class="tasks">
+        
+      </div>
+    </section>
   </div>
 </body>
 </html>
